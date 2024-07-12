@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* Add styles here to affect the dialog globally */
+
+.mat-dialog-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Custom dialog header */
+h2.mat-dialog-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form field styling */
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Dialog action buttons */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.grey-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  background-color: #444444!important;
+  color: #fff!important;
+
+}
+
+
+.overflow-ellipsis {
+  max-width: 150px; /* Set the maximum width for the column */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

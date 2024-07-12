@@ -1,0 +1,50 @@
+<div class="task-form">
+  <h2 mat-dialog-title>{{ isEditMode ? 'Edit Task' : 'Add Task' }}</h2>
+
+  <form [formGroup]="taskForm" >
+    <mat-form-field class="w-100">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" required>
+      <mat-error *ngIf="taskForm.get('title')?.invalid && (taskForm.get('title')?.dirty || taskForm.get('title')?.touched)">
+        Title is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+      <mat-error *ngIf="taskForm.get('description')?.invalid">
+        Description must be 300 characters or less.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" required>
+        <mat-option value="Pending">Pending</mat-option>
+        <mat-option value="InProgress">In Progress</mat-option>
+        <mat-option value="Completed">Completed</mat-option>
+      </mat-select>
+      <mat-error *ngIf="taskForm.get('status')?.invalid && (taskForm.get('status')?.dirty || taskForm.get('status')?.touched)">
+        Status is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>Due Date</mat-label>
+      <input matInput [matDatepicker]="picker" [matDatepickerFilter]="blockDatesBeforeToday" formControlName="dueDate" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker  #picker></mat-datepicker>
+      <mat-error *ngIf="taskForm.get('dueDate')?.invalid && (taskForm.get('dueDate')?.dirty || taskForm.get('dueDate')?.touched)">
+        Due Date is required.
+      </mat-error>
+    </mat-form-field>
+
+    <div class="dialog-actions">
+      <button mat-button (click)="onCancel()">Cancel</button>
+      <button mat-raised-button class="grey-button" color="primary"(click)="onSubmit()" >
+        {{ isEditMode ? 'Save' : 'Add' }}
+      </button>
+    </div>
+  </form>
+</div>

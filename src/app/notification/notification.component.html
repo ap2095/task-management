@@ -1,0 +1,15 @@
+<div class="notification-list" *ngIf="notifications.length > 0; else noNotifications">
+  <mat-list>
+    <mat-list-item *ngFor="let notification of notifications">
+      {{ notification }}
+    </mat-list-item>
+  </mat-list>
+</div>
+<ng-template class="notification-list" #noNotifications>
+  <mat-list>
+    <mat-list-item>No Notifications To Show</mat-list-item>
+  </mat-list>
+</ng-template>
+
+
+

@@ -1,0 +1,104 @@
+/* Full height for parent to enable centering */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(190, 190, 190);
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Use a clean font */
+}
+
+/* Center the card with refined shadow, rounded corners, and a more modern look */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px; /* Extra padding for spacious look */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  border-radius: 15px; /* More rounded corners */
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  backdrop-filter: blur(10px); /* Background blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border for card */
+}
+
+/* Hover effect for the card */
+.login-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Smooth fade-in animation for the card */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Consistent spacing and alignment for form elements */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased gap for better spacing */
+}
+
+/* Style input fields with enhanced look */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px; /* Spacing between form fields */
+}
+
+mat-form-field .mat-input-element {
+  background: rgba(255, 255, 255, 0.7); /* Light background for input */
+  border-radius: 5px; /* Rounded input */
+  padding: 10px; /* Extra padding for input fields */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow */
+}
+
+mat-form-field .mat-input-element:focus {
+  background: rgba(255, 255, 255, 1); /* Opaque background on focus */
+}
+
+mat-form-field.mat-focused .mat-form-field-label {
+  color: #673ab7 !important; /* Deep purple for focus */
+  font-weight: bold; /* Bold label on focus */
+}
+
+/* Style the login button with a modern look */
+button {
+  align-self: center;
+  width: 100%;
+  max-width: 250px; /* Wider button */
+  padding: 12px; /* Extra padding for button */
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 25px; /* Rounded button */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.03); /* Slightly lift and enlarge on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px; /* Less padding for smaller screens */
+  }
+  button {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Space above the button */
+}
+
+.center-button {
+  margin: 20px;
+}

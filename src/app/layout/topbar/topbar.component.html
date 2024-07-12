@@ -1,0 +1,22 @@
+<div class="topbar">
+  <div class="topbar-left">
+    <span class="logo">Task Management</span>
+  </div>
+  <div class="topbar-right">
+    <div class="notification-container">
+      <mat-icon class="notification-icon" (click)="toggleNotificationTray()">notifications</mat-icon>
+      <div class="notification-count" >{{ notificationCount }}</div>
+      <div class="notification-tray" *ngIf="isTrayOpen">
+        <app-notification></app-notification>
+      </div>
+    </div>
+    <div>
+      <mat-icon>account_circle</mat-icon>
+    </div>
+    <div (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </div>
+  </div>
+</div>
+
+

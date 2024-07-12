@@ -1,0 +1,121 @@
+.sidebar-list {
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  padding: 10px 16px; /* Adds padding for a better look */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #e0e0e0; /* Hover effect */
+}
+
+.sidebar-icon {
+  margin-right: 16px; /* Space between icon and text */
+  font-size: 24px; /* Adjust icon size */
+  color: #673ab7; /* Icon color */
+}
+
+.sidebar-text {
+  flex: 1; /* Ensure text takes available space */
+  font-size: 16px; /* Adjust text size */
+  color: #333; /* Text color */
+}
+
+.active-link {
+  background-color: #d1c4e9; /* Highlight active link */
+}
+
+@media (max-width: 768px) {
+  .sidebar-item {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .sidebar-icon {
+    margin-right: 12px; /* Adjust margin for smaller screens */
+  }
+
+  .sidebar-text {
+    font-size: 14px; /* Adjust text size for smaller screens */
+  }
+}
+
+/* Container for the user details card */
+.user-details-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px; /* Reduced padding for compactness */
+  border-bottom: 1px solid #e0e0e0; /* Optional: border to separate from nav list */
+  margin-bottom: 15px; /* Reduced margin below the card */
+}
+
+/* Style for the user's photo */
+.user-photo {
+  width: 60px; /* Smaller size for compactness */
+  height: 60px; /* Ensure height matches width for a perfect circle */
+  border-radius: 50%; /* Makes the photo rounded */
+  object-fit: cover; /* Ensure the photo is properly scaled */
+  margin-bottom: 8px; /* Reduced space between photo and name */
+}
+
+/* Style for the user's name */
+.user-name {
+  font-size: 14px; /* Smaller font size */
+  font-weight: bold; /* Make the name bold */
+  color: #333; /* Text color */
+}
+
+/* Styles for the navigation list */
+.sidebar-list {
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  padding: 8px 12px; /* Reduced padding for a better look */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #e0e0e0; /* Hover effect */
+}
+
+.sidebar-icon {
+  margin-right: 8px; /* Reduced space between icon and text */
+  font-size: 20px; /* Smaller icon size */
+  color: #673ab7; /* Icon color */
+}
+
+.sidebar-text {
+  flex: 1; /* Ensure text takes available space */
+  font-size: 14px; /* Smaller text size */
+  color: #333; /* Text color */
+}
+
+.active-link {
+  background-color: #d1c4e9; /* Highlight active link */
+}
+
+@media (max-width: 768px) {
+  .sidebar-item {
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .sidebar-icon {
+    margin-right: 6px; /* Adjust margin for smaller screens */
+  }
+
+  .sidebar-text {
+    font-size: 12px; /* Adjust text size for smaller screens */
+  }
+}
