@@ -9,7 +9,6 @@ import { catchError, delay, map } from 'rxjs/operators';
 export class AuthService {
   constructor( private router: Router) {}
 
-
   login(email: string, password: string): Observable<any> {
     const mockResponse = {
       result: true,
